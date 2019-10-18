@@ -1,0 +1,12 @@
+#!/bin/sh
+
+log() {
+    echo "mender:$*" >&2
+}
+
+log "$(mender -show-artifact): $(basename "$0") was called!"
+
+psplash-write "MSG Installation is ongoing"
+psplash-write "PROGRESS 50"
+sleep 2
+exit 0
